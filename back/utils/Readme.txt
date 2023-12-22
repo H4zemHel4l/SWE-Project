@@ -1,0 +1,1 @@
+ Utility functions that can be reused across the application. For example, validation functions or error handling utilities.

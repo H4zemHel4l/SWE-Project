@@ -1,0 +1,1 @@
+Organize your routes into separate files. Each route file should correspond to a group of related routes. Use Express Router for this.

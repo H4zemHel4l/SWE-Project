@@ -1,0 +1,1 @@
+Business logic that doesn't belong in controllers can be placed here. Services can interact with models and other services.

@@ -1,0 +1,1 @@
+Middleware functions can include authentication, authorization, error handling, and any other logic that needs to be executed before or after route handlers
