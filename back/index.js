@@ -22,7 +22,7 @@ mongoose
     console.log("DB Connection Failed");
     console.log(err);
   });
-app.use("/book", BookRouter);
+app.use("/books", BookRouter);
 app.use(UserRouter);
 
 const port = process.env.PORT || 8080;

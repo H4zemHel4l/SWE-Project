@@ -24,6 +24,11 @@ const userShcema = new mongoose.Schema({
     enum: ["ADMIN", "USER"],
     default: "USER",
   },
+  token: [
+    {
+      type: Object,
+    },
+  ],
   bio: {
     type: String,
   },

@@ -53,6 +53,18 @@ const login = async (req, res) => {
 
     const token = creatToken(user._id);
 
+    let oldTokens = user.tokens || [];
+    if (oldTokens.length) {
+      oldTokens = oldTokens.filter((t) => {
+        const timedif = (Date.now() - parseInt(t.signedAt)) / 1000;
+        if (timedif < 86400) {
+          return t;
+        }
+      });
+    }
+    await User.findByIdAndUpdate(user._id, {
+      tokens: [...oldTokens, { token, signedAt: Date.now().toString() }],
+    });
     res
       .status(200)
       .send({ _id: user._id, name: user.name, email, role: user.role, token });
@@ -89,12 +101,27 @@ const updateUserProfile = async (req, res) => {
   }
 };
 // logout the user
-const logoutUser = (req, res) => {
-  res.status(200).send("User logged out successfully");
+const logoutUser = async (req, res) => {
+  if (req.headers && req.headers.authorization) {
+    const token = req.headers.authorization.split(" ")[1];
+    if (!token) {
+      res.status(401).json({ message: "Authorization Fail" });
+    }
+
+    const tokens = req.user.tokens;
+
+    const newTokens = tokens.filter((t) => t.token !== token);
+
+    await User.findByIdAndUpdate(req.user._id, {
+      tokens: newTokens,
+    });
+    res.status(200).send("User logged out successfully");
+  }
 };
 export const userController = {
   register,
   login,
   getUserProfile,
   updateUserProfile,
+  logoutUser,
 };
