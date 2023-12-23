@@ -3,11 +3,8 @@ import { bookController } from "../controllers/bookCRUD.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
 const router = express.Router();
 
-router.get(
-  "/:id",
-  bookController.getSingleBook
-);
-router.get("/",  bookController.getAllBooks);
+router.get("/:id", bookController.getSingleBook);
+router.get("/", bookController.getAllBooks);
 router.post(
   "/create",
   authMiddleware.authenticateUser,
