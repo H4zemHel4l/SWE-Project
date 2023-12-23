@@ -29,6 +29,7 @@ export function SignIn() {
       console.log(response.data);
       if (response.data._id) {
         await localStorage.setItem("token", response.data.token);
+        await localStorage.setItem("role", response.data.role);
         setLoginMessage("Login successful! Redirecting...");
         setTimeout(() => {
           navigate("/profile");

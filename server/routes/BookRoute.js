@@ -5,10 +5,9 @@ const router = express.Router();
 
 router.get(
   "/:id",
-  authMiddleware.authenticateUser,
   bookController.getSingleBook
 );
-router.get("/", authMiddleware.authenticateUser, bookController.getAllBooks);
+router.get("/",  bookController.getAllBooks);
 router.post(
   "/create",
   authMiddleware.authenticateUser,

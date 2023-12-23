@@ -21,7 +21,7 @@ function Desc() {
                 const response = await fetch(`http://localhost:5000/books/${id}`);
                 if (response.ok) {
                     const data = await response.json();
-                    setBook(data);
+                    setBook(data.data.book);
                 } else {
                     console.error('Failed to fetch book data');
                 }
@@ -35,7 +35,7 @@ function Desc() {
 
     const deleteBook = async () => {
         try {
-            await axios.delete(`http://localhost:5000/books/${book.id}`);
+            await axios.delete(`http://localhost:5000/books/${book._id}`);
             navigate(`/${book.category}`);
         } catch (error) {
             console.error('Error deleting book:', error);
@@ -70,7 +70,7 @@ function Desc() {
                                     Download PDF
                                 </Link>
                                 <Link
-                                    to={`/edit/${book.id}`}
+                                    to={`/edit/${book._id}`}
                                     className="flex m-auto text-white bg-blue-900 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded"
                                 >
                                     Edit

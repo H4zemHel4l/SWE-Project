@@ -9,6 +9,8 @@ import book from "../assets/book.jpg"
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
+const role = localStorage.getItem("role");
+
 const teamMembers = [
     { id: 1, name: "Ziad Salah", role: ["Frontend Developer"], image: ziad },
     { id: 2, name: "Hazem Helal", role: ["Frontend Developer"], image: hazem },

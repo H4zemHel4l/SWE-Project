@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
+import {Button} from "@material-tailwind/react";
+
 
 const All = () => {
     const [books, setBooks] = useState([]);
     const [search, setSearch] = useState("");
-
+    function dd(d){
+        console.log(d);
+    }
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -54,7 +58,8 @@ const All = () => {
                             return lowerCaseSearch === "" ? true : bookName.toLowerCase().includes(lowerCaseSearch);
                         })
                             .map((book) =>  (
-                                <Link key={book.id} to={`/desc/${book.id}`}>
+                                <Link key={book._id} to={`/desc/${book._id}`}>
+
                                     <div
                                         className="w-60 p-2 bg-gray-700 rounded-xl backdrop-filter backdrop-blur-md bg-opacity-50 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl cursor-pointer m-1"
                                     >
@@ -73,13 +78,11 @@ const All = () => {
                                         </div>
                                         {/* CTA */}
                                         <div className="m-2">
-                                            <a
-                                                role="button"
-                                                href="#"
+                                            <Button
                                                 className="text-blue-600 bg-white px-3 py-1 rounded-md hover:bg-white"
                                             >
-                                                *
-                                            </a>
+                                                {book.author}
+                                            </Button>
                                         </div>
                                     </div>
                                 </Link>
