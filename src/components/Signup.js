@@ -25,11 +25,57 @@ export function SignUp() {
                 <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
                     <div className="mb-1 flex flex-col gap-6">
                         <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                            Full Name
+                        </Typography>
+                        <Input
+                            size="lg"
+                            placeholder="fUll name"
+                            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                            labelProps={{
+                                className: "before:content-none after:content-none",
+                            }}
+                        />
+                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                            User Name
+                        </Typography>
+                        <Input
+                            size="lg"
+                            placeholder="user name"
+                            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                            labelProps={{
+                                className: "before:content-none after:content-none",
+                            }}
+                        />
+                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
                             Your email
                         </Typography>
                         <Input
                             size="lg"
                             placeholder="name@mail.com"
+                            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                            labelProps={{
+                                className: "before:content-none after:content-none",
+                            }}
+                        />
+                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                            Password
+                        </Typography>
+                        <Input
+                            type="password"
+                            size="lg"
+                            placeholder="********"
+                            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                            labelProps={{
+                                className: "before:content-none after:content-none",
+                            }}
+                        />
+                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                            Confirm Password
+                        </Typography>
+                        <Input
+                            type="password"
+                            size="lg"
+                            placeholder="********"
                             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
                             labelProps={{
                                 className: "before:content-none after:content-none",
@@ -60,7 +106,7 @@ export function SignUp() {
 
                     <div className="space-y-4 mt-8">
                         <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://w...content-available-to-author-only...3.org/2000/svg">
                                 <g clipPath="url(#clip0_1156_824)">
                                     <path d="M16.3442 8.18429C16.3442 7.64047 16.3001 7.09371 16.206 6.55872H8.66016V9.63937H12.9813C12.802 10.6329 12.2258 11.5119 11.3822 12.0704V14.0693H13.9602C15.4741 12.6759 16.3442 10.6182 16.3442 8.18429Z" fill="#4285F4" />
                                     <path d="M8.65974 16.0006C10.8174 16.0006 12.637 15.2922 13.9627 14.0693L11.3847 12.0704C10.6675 12.5584 9.7415 12.8347 8.66268 12.8347C6.5756 12.8347 4.80598 11.4266 4.17104 9.53357H1.51074V11.5942C2.86882 14.2956 5.63494 16.0006 8.65974 16.0006Z" fill="#34A853" />

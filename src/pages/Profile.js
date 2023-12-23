@@ -4,8 +4,6 @@ import axios from "axios";
 
 const Profile = ({ id }) => {
   const [userProfile, setUserProfile] = useState(null);
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const token = localStorage.getItem("token");
 
@@ -18,18 +16,13 @@ const Profile = ({ id }) => {
         })
         .then((response) => {
           setUserProfile(response.data);
-          setLoading(false);
         })
         .catch((error) => {
           console.error("Error fetching user profile:", error);
-          setLoading(false);
         });
     }
   }, [id]);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
 
   if (!userProfile) {
     return <div>User profile not found</div>;

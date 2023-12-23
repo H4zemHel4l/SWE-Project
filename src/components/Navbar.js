@@ -5,7 +5,6 @@ import logo from "../assets/Logo.png";
 
 function Navbar() {
     const [openNav, setOpenNav] = React.useState(false);
-
     React.useEffect(() => {
         window.addEventListener(
             "resize",
@@ -14,7 +13,7 @@ function Navbar() {
     }, []);
 
     return (
-        <div color="transparent" className="bg-blue-gray-700 pt-5">
+        <div color="transparent" className="bg-black pt-5">
             <div className="container mx-auto flex items-center justify-between text-white">
                 <Link to="/">
                     <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
@@ -90,7 +89,6 @@ function Navbar() {
                             color="inherit"
                             className="capitalize mb-2"
                         >
-                            {/* Close mobile nav on link click */}
                             <Link
                                 to={link.href}
                                 className="flex items-center gap-1 p-1 font-bold"
@@ -100,17 +98,19 @@ function Navbar() {
                             </Link>
                         </Typography>
                     ))}
-                    {/* Fix the button text for Sign In */}
+
                     <Link to="/signup" className="mb-2 block">
                         <Button variant="text" size="sm" fullWidth>
                             Sign In
                         </Button>
                     </Link>
+
                     <Link to="/profile" className="w-full block">
                         <Button variant="text" size="sm" fullWidth>
                             Profile
                         </Button>
                     </Link>
+
                 </div>
             </MobileNav>
         </div>

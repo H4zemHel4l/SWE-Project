@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import TextField from '@mui/material/TextField';
 
 const All = () => {
     const [book, setBook] = useState([]);
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,6 +22,24 @@ const All = () => {
 
     return (
         <div>
+            <div className="bg-black flex">
+                <div className="container mx-40 text-white">
+                    <div className="flex mb-3">
+                        <TextField
+                            className="justify-center"
+                            fullWidth
+                            label="Search..."
+                            onChange={(e) => setSearch(e.target.value)}
+                            variant="outlined"
+                            InputProps={{
+                                className: 'bg-gray-300 text-black mx-auto',
+                            }}
+                        />
+                    </div>
+                </div>
+            </div>
+
+
             <section className="text-gray-600 body-font dark:bg-gray-900">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-wrap -m-4 justify-center">
@@ -39,7 +59,7 @@ const All = () => {
                                         {/* Heading */}
                                         <h2 className="font-bold text-lg text- mb-2">{item.name}</h2>
                                         {/* Description */}
-                                        <p className="text-sm text-gray-600">{item.desc}</p>
+                                        <p className="text-sm text-gray-600">{item.category}</p>
                                     </div>
                                     {/* CTA */}
                                     <div className="m-2">
