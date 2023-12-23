@@ -1,6 +1,6 @@
 import { Input, Checkbox, Button, Typography } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import png from "../assets/book.jpg";
+import png from "../assets/panner.jpg";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";

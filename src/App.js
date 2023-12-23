@@ -11,6 +11,7 @@ import Selfgrowth from "./pages/Selfgrowth";
 import Profile from "./pages/Profile";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
+import Edit from "./components/Edit";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                     <Route path={'/selfgrowth'} element={<Selfgrowth/>}/>
                     <Route path={'/others'} element={<Other/>}/>
                     <Route path={'/desc/:id'} element={<Desc/>}/>
+                    <Route path={'/edit/:id'} element={<Edit/>}/>
                 </Routes>
                 <Footer/>
             </BrowserRouter>

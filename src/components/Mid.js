@@ -12,18 +12,23 @@ import { FaGithub } from "react-icons/fa";
 const teamMembers = [
     { id: 1, name: "Ziad Salah", role: ["Frontend Developer"], image: ziad },
     { id: 2, name: "Hazem Helal", role: ["Frontend Developer"], image: hazem },
-    { id: 3, name: "Ahmed Mohamed", role: ["UI/UX Designer"], image: ahmed },
     { id: 5, name: "Youssef Medhat", role: ["Backend Developer"], image: yousef },
-    { id: 6, name: "Sherif Khairy", role: ["Backend Developer"], image: sherif },
     { id: 4, name: "Shahd Osman", role: ["Backend Developer"], image: shahd },
-    // Add other team members as needed
+    { id: 6, name: "Sherif Khairy", role: ["Backend Developer"], image: sherif },
+    { id: 3, name: "Ahmed Mohamed", role: ["UI/UX Designer"], image: ahmed },
+
 ];
 const Mid = () => {
     return (
         <div>
             <div className="relative">
-                <img src={book} alt="book" height={3000} width={5000} className=" opacity-70"/>
+                <img src={book} alt="book" height={3000} width={5000} className="opacity-70"/>
+
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                    <h1 className="text-4xl font-bold text-black">Welcome to Our BookTopia</h1>
+                </div>
             </div>
+
             <div className="flex flex-wrap justify-center rounded overflow-hidden shadow-lg m-5 ">
                 {teamMembers.map((member) => (
                     <div key={member.id}
