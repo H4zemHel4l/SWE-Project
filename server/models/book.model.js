@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// Define the book schema
 const bookSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -24,7 +25,12 @@ const bookSchema = new mongoose.Schema({
   pdfLink: {
     type: String,
     required: true,
+    // Add additional validation if needed, e.g., match: /^https?:\/\// for URL format
   },
 });
 
+// Create the Book model using the schema
 export const Book = mongoose.model("Book", bookSchema);
+
+// Optionally, you might want to export the bookSchema for potential reuse or reference
+// export const BookSchema = bookSchema;

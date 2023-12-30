@@ -5,26 +5,26 @@ import {Navbar as MTNavbar, MobileNav, Typography, Button, IconButton} from "@ma
 function Navbar() {
     const [openNav, setOpenNav] = React.useState(false);
     const [user, setUser] = useState("");
+    const [showSignInSignUp, setShowSignInSignUp] = useState(true);
     let navigate = useNavigate();
 
-    function clr(){
+    function clr() {
         localStorage.clear();
         setUser("");
+        setShowSignInSignUp(true); // Reset visibility when user is cleared
         navigate(`/`);
     }
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await fetch("http://localhost:5000/books", {
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: "Bearer " + localStorage.getItem("token"),
-                    },
+                    // Fetch logic...
                 });
                 const jsonData = await response.json();
                 console.log(jsonData);
                 setUser(jsonData.data.books);
+                setShowSignInSignUp(jsonData.data.books === ''); // Update visibility based on user data
             } catch (error) {
                 console.error("Error fetching book:", error);
             }
@@ -83,37 +83,41 @@ function Navbar() {
                     </ul>
                 </div>
                 <div className="hidden gap-2 lg:flex">
-                    {user === '' ? (
-                            <>
-                                <Link to="/signin" className="m-2 block">
-                                    <Button variant="text" size="sm" fullWidth className="text-white bg-gray-900 hover:bg-gray-600"
-                                    >
-                                        Sign In
-                                    </Button>
-                                </Link>
+                    {showSignInSignUp ? (
+                        <>
+                            <Link to="/signin" className="m-2 block">
+                                <Button variant="text" size="sm" fullWidth
+                                        className="text-white bg-gray-900 hover:bg-gray-600">
+                                    Sign In
+                                </Button>
+                            </Link>
 
-                                <Link to="/signup" className="m-2 block">
-                                    <Button variant="text" size="sm" fullWidth className="text-white bg-gray-900 hover:bg-gray-600">
-                                        Sign Up
-                                    </Button>
-                                </Link>
-                            </>)
-                        : (
-                            <>
-                                <Link to="/profile" className="m-2 block">
-                                    <Button variant="text" size="sm" fullWidth className="text-white bg-gray-900 hover:bg-gray-600">
-                                        Profile
-                                    </Button>
-                                </Link>
+                            <Link to="/signup" className="m-2 block">
+                                <Button variant="text" size="sm" fullWidth
+                                        className="text-white bg-gray-900 hover:bg-gray-600">
+                                    Sign Up
+                                </Button>
+                            </Link>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/profile" className="m-2 block">
+                                <Button variant="text" size="sm" fullWidth
+                                        className="text-white bg-gray-900 hover:bg-gray-600">
+                                    Profile
+                                </Button>
+                            </Link>
 
-                                <Link to="/signout" className="m-2 block">
-                                    <Button onClick={clr} variant="text" size="sm" fullWidth className="text-white bg-gray-900 hover:bg-gray-600">
-                                        Sign Out
-                                    </Button>
-                                </Link>
-                            </>)}
-
+                            <Link to="/signout" className="m-2 block">
+                                <Button onClick={clr} variant="text" size="sm" fullWidth
+                                        className="text-white bg-gray-900 hover:bg-gray-600">
+                                    Sign Out
+                                </Button>
+                            </Link>
+                        </>
+                    )}
                 </div>
+
             </div>
             <MobileNav
                 className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-900"
@@ -144,10 +148,10 @@ function Navbar() {
                         </Typography>
                     ))}
 
-                    {user === '' ? (
+                    {showSignInSignUp ? (
                             <>
                                 <Link to="/signin" className="w-full block">
-                                    <Button variant="text" size="sm" fullWidth>
+                                <Button variant="text" size="sm" fullWidth>
                                         Sign In
                                     </Button>
                                 </Link>

@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
-const userShcema = new mongoose.Schema({
+
+// Define the user schema
+const userSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -17,6 +19,7 @@ const userShcema = new mongoose.Schema({
     type: String,
     required: true,
     minlength: 8,
+    // Add additional validation or complexity requirements if needed
   },
   role: {
     type: String,
@@ -27,6 +30,7 @@ const userShcema = new mongoose.Schema({
   token: [
     {
       type: Object,
+      // Consider providing more specific details about the structure of these objects
     },
   ],
   bio: {
@@ -37,6 +41,7 @@ const userShcema = new mongoose.Schema({
   },
   favoriteBooks: {
     type: [mongoose.Schema.Types.ObjectId],
+    // Consider referencing another collection (e.g., "Book") using ObjectId
   },
   freqList: {
     type: [
@@ -47,4 +52,6 @@ const userShcema = new mongoose.Schema({
     ],
   },
 });
-export const User = mongoose.model("User", userShcema);
+
+// Create the User model using the schema
+export const User = mongoose.model("User", userSchema);

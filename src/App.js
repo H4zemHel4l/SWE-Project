@@ -12,6 +12,7 @@ import Profile from "./pages/Profile";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 import Edit from "./components/Edit";
+import Add from "./components/Add";
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                     <Route path={'/others'} element={<Other/>}/>
                     <Route path={'/desc/:id'} element={<Desc/>}/>
                     <Route path={'/edit/:id'} element={<Edit/>}/>
+                    <Route path={'/add'} element={<Add/>}/>
                 </Routes>
                 <Footer/>
             </BrowserRouter>

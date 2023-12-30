@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import {Button} from "@material-tailwind/react";
+import Add from "../components/Add";
 
 
 const All = () => {
@@ -46,6 +47,15 @@ const All = () => {
                             }}
                         />
                     </div>
+                </div>
+                <div>
+
+                    <Link to={'/add'} className="mr-36">
+                        <Button>
+                            +
+                        </Button>
+                    </Link>
+
                 </div>
             </div>
 
