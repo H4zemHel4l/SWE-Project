@@ -1,70 +1,91 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Booktopia
 
-## Available Scripts
+Welcome to Booktopia, an online e-library platform that revolutionizes the way people access and enjoy books.
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+Booktopia is built with Node.js, Express.js, React.js, and MongoDB, providing a user-friendly platform for accessing a diverse collection of books. The primary objectives include:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Create a user-friendly and intuitive platform.
+- Implement a personalized book recommendation system.
+- Offer a cost-effective subscription model.
+- Ensure cross-device compatibility.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+Booktopia utilizes modern technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js: JavaScript runtime for server-side processing.
+- Express.js: Web application framework for building APIs.
+- React.js: JavaScript library for creating interactive user interfaces.
+- MongoDB: Flexible and scalable NoSQL database for efficient data storage.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To install and run the frontend, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Navigate to the frontend directory
+cd frontend
 
-### `npm run eject`
+# Install dependencies
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Start the development server
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To install and run the server, follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# Navigate to the server directory
+cd server
 
-## Learn More
+# Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Start the server
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Full Development Process
 
-### Code Splitting
+Booktopia follows a streamlined development process using GitHub, Google Meetings, Agile with WBS, and ClickUp for project management.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Testing and Quality Assurance
 
-### Analyzing the Bundle Size
+Booktopia ensures high-quality standards through unit testing, integration testing, end-to-end testing, code reviews, usability testing, automated testing, load and performance testing, and security testing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Continuous Integration/Continuous Deployment (CI/CD)
 
-### Making a Progressive Web App
+Booktopia implements CI/CD practices using GitHub Actions or Travis CI for automated building, testing, and deployment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Deployment Process
 
-### Advanced Configuration
+Booktopia's deployment process involves version control with GitHub, hosting on Netlify, and a deployment workflow that includes development, testing, and production deployment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## System Diagrams
 
-### Deployment
+- Entity-Relationship Diagram (ERD)
+- Use Case and its Analysis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Project Image
 
-### `npm run build` fails to minify
+Add an image here that represents your project. You can host it on platforms like Imgur, and insert the link below.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![image](https://github.com/Hel4l/SWE-Project/assets/110468386/9e21e79a-7334-4f80-a89c-2f7088858793)
+
+
+## Documentation
+
+Explore Booktopia's detailed documentation [here](https://docs.google.com/document/d/1dikv3yIjdvd6FzbYkueJNMaqy_HzFGogKscOXaoujOQ/edit).
+
+## Video Link
+
+Watch a demo of Booktopia on [here](https://www.linkedin.com/posts/hazemhelal_we-are-excited-to-share-our-swe-project-activity-7146831834226626560-2RHq?utm_source=share&utm_medium=member_desktop).
+
