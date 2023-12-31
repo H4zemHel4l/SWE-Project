@@ -87,5 +87,5 @@ Explore Booktopia's detailed documentation [here](https://docs.google.com/docume
 
 ## Video Link
 
-Watch a demo of Booktopia on [here](https://www.linkedin.com/posts/hazemhelal_we-are-excited-to-share-our-swe-project-activity-7146831834226626560-2RHq?utm_source=share&utm_medium=member_desktop).
+Watch a demo of Booktopia [here](https://www.linkedin.com/posts/hazemhelal_we-are-excited-to-share-our-swe-project-activity-7146831834226626560-2RHq?utm_source=share&utm_medium=member_desktop).
 
