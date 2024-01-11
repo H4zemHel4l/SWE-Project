@@ -40,7 +40,7 @@ npm start
 
 ### Server
 
-To install and run the server, follow these steps:
+To install and run the server, follow these steps: 
 
 ```bash
 # Navigate to the server directory
