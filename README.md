@@ -65,7 +65,7 @@ Booktopia ensures high-quality standards through unit testing, integration testi
 
 Booktopia implements CI/CD practices using GitHub Actions or Travis CI for automated building, testing, and deployment.
 
-## Deployment Process
+## Deployment Process 
 
 Booktopia's deployment process involves version control with GitHub, hosting on Netlify, and a deployment workflow that includes development, testing, and production deployment.
 
